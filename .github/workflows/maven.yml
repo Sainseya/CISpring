@@ -12,7 +12,7 @@ on:
   pull_request:
     branches: [ "master" ]
   push:
-    branches: [ "master" ]
+    branches: [ "master", "dev", "maBranch" ]
 
 jobs:
   build:
@@ -31,5 +31,3 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Coverage with Maven
       run: mvn -B test --file pom.xml
-
-   #
